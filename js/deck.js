@@ -29,8 +29,8 @@
         slide.setAttribute("hidden", "");
       }
     });
-    prev.disabled = current === 0;
-    next.disabled = current === slides.length - 1;
+    prev.hidden = current === 0;
+    next.hidden = current === slides.length - 1;
     if (!focusSlide) return;
     const heading = slides[current].querySelector("h1, h2");
     if (!heading) return;
