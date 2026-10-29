@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="معماری پیشنهادی سامانه هوشمند سازمانی و دستیار چندعامله پرشیا خودرو (PMG)">
+  <meta name="theme-color" content="#065C9F">
+  <title>معماری پیشنهادی — پرشیا خودرو (PMG)</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23EFF4F9' width='32' height='32'/%3E%3Crect x='8' y='8' width='16' height='16' fill='none' stroke='%23065C9F' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#deck">رفتن به محتوا</a>
+
+  <main id="deck" class="deck">
+    <section class="slide slide--cover is-active" id="s-1" data-label="شروع">
+      <div class="slide__inner cover">
+        <div class="cover__head">
+          <div class="cover__copy">
+            <h1>
+              <span class="cover__lead">معماری پیشنهادی برای پروژهٔ</span>
+              <span class="cover__name">سامانه هوشمند سازمانی و دستیار چندعامله</span>
+              <span class="cover__org">پرشیا خودرو (PMG)</span>
+            </h1>
+            <p class="cover__by">تهیه شده توسط امیررضا معصومی</p>
+          </div>
+          <img class="cover__logo" src="assets/persia-logo.png" alt="لوگوی پرشیا خودرو">
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--arch" id="s-2" data-label="معماری" hidden>
+      <div class="slide__inner arch">
+        <p class="arch__label">معماری مفهومی <span class="arch__hint">لایه‌های علامت‌دار با کلیک باز می‌شوند</span></p>
+        <div class="arch__stack" dir="ltr">
+          <a class="layer" id="layer-presentation" data-layer="presentation" href="#s-ui" data-goto="s-ui">
+            <h2>Presentation Layer</h2>
+            <ul>
+              <li>React Application</li>
+              <li>Agent Workspace</li>
+              <li>BI Dashboards</li>
+              <li>Admin</li>
+            </ul>
+            <ul>
+              <li>REST API</li>
+              <li>Streaming</li>
+              <li>Authentication</li>
+            </ul>
+          </a>
+
+          <a class="layer" id="layer-application" data-layer="application" href="#s-app" data-goto="s-app">
+            <h2>Application &amp; API Layer</h2>
+            <ul>
+              <li>Backend</li>
+              <li>API</li>
+              <li>Authorization</li>
+              <li>Business Logic</li>
+              <li>Job Management</li>
+            </ul>
+          </a>
+
+          <a class="layer" id="layer-ai" data-layer="ai" href="#s-ai" data-goto="s-ai">
+            <h2>AI &amp; Agent Platform</h2>
+            <ul>
+              <li>Agent Runtime</li>
+              <li>Model Access</li>
+              <li>Tools</li>
+              <li>MCP</li>
+              <li>Retrieval</li>
+              <li>Evaluations</li>
+            </ul>
+          </a>
+
+          <a class="layer" id="layer-analytics" data-layer="analytics" href="#s-bi" data-goto="s-bi">
+            <h2>Analytics &amp; BI</h2>
+            <ul>
+              <li>Semantic Layer</li>
+              <li>Metrics</li>
+              <li>KPI/OKR</li>
+              <li>Reporting</li>
+              <li>Statistical Analysis</li>
+            </ul>
+          </a>
+
+          <a class="layer" id="layer-data" data-layer="data" href="#s-data" data-goto="s-data">
+            <h2>Data Platform</h2>
+            <ul>
+              <li>Lakehouse / Warehouse</li>
+            </ul>
+          </a>
+
+          <a class="layer" id="layer-ingestion" data-layer="ingestion" href="#s-ingest" data-goto="s-ingest">
+            <h2>Data Ingestion &amp; Processing</h2>
+            <ul>
+              <li>Connectors</li>
+              <li>ETL/ELT</li>
+              <li>Scheduling</li>
+              <li>Data Quality</li>
+              <li>Pipeline Orchestration</li>
+            </ul>
+          </a>
+
+          <a class="layer" id="layer-governance" data-layer="governance" href="#s-gov" data-goto="s-gov">
+            <h2>Data Governance</h2>
+            <ul>
+              <li>Ownership &amp; Stewardship</li>
+              <li>Catalog &amp; Metadata</li>
+              <li>Data Quality</li>
+              <li>Lineage</li>
+              <li>Classification</li>
+              <li>Access Control</li>
+              <li>Privacy &amp; Compliance</li>
+              <li>Lifecycle</li>
+              <li>Business Glossary</li>
+              <li>AI &amp; Agent Governance</li>
+              <li>Policies &amp; Audit</li>
+            </ul>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--gov" id="s-gov" data-label="حاکمیت داده" hidden>
+      <div class="slide__inner gov">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> Data Governance</p>
+            <h2>حاکمیت داده</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="gov__lead">Data Governance مجموعه‌ای از سیاست‌ها، استانداردها، نقش‌ها و کنترل‌هاست که تضمین می‌کند داده‌های سازمان در تمام چرخه‌ی عمر خود، قابل‌اعتماد، امن، قابل‌ردیابی و مطابق الزامات کسب‌وکار و قوانین باشند. این لایه باید تمام حوزه‌های Data Engineering، BI، Data Science و AI/Agent را پوشش دهد.</p>
+        <p class="gov__basis">این بخش را بر پایه‌ی مفاهیم Data Management Body of Knowledge (DMBOK) پیش می‌بریم و مفاهیم AI Governance را از NIST AI RMF Playbook برمی‌گیریم.</p>
+        <p class="gov__label">کارهای کلیدی</p>
+        <ol class="gov__list">
+          <li>
+            <h3><span class="gov__n">01</span><span class="gov__t" dir="ltr">Data Ownership &amp; Stewardship</span></h3>
+            <p>تعیین مسئولیت مدیریت داده‌ها، مالک داده (Data Owner) و متولی کیفیت و تعریف آن (Data Steward).</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">02</span><span class="gov__t" dir="ltr">Data Catalog &amp; Metadata Management</span></h3>
+            <p>مستندسازی منابع داده، ساختارها، تعاریف، مالکیت و قابلیت کشف داده‌ها.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">03</span><span class="gov__t" dir="ltr">Data Quality Management</span></h3>
+            <p>تعریف و پایش معیارهای کیفیت داده شامل دقت، کامل بودن، سازگاری، یکتایی و به‌روز بودن.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">04</span><span class="gov__t" dir="ltr">Data Lineage &amp; Traceability</span></h3>
+            <p>ردیابی منشأ داده، تبدیل‌های انجام‌شده و وابستگی داده‌ها تا گزارش‌ها، KPIها و خروجی مدل‌ها.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">05</span><span class="gov__t" dir="ltr">Data Classification &amp; Sensitivity</span></h3>
+            <p>طبقه‌بندی داده‌ها بر اساس سطح حساسیت، محرمانگی و الزامات حفاظتی.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">06</span><span class="gov__t" dir="ltr">Data Access Control &amp; Authorization</span></h3>
+            <p>تعریف و اعمال مجوز دسترسی بر اساس نقش، هویت، زمینه‌ی استفاده و اصل حداقل دسترسی (Least Privilege).</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">07</span><span class="gov__t" dir="ltr">Privacy &amp; Regulatory Compliance</span></h3>
+            <p>مدیریت داده‌های شخصی، رضایت و مبنای قانونی پردازش، نگهداری و حذف داده‌ها و رعایت مقررات مرتبط مانند GDPR در صورت شمول.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">08</span><span class="gov__t" dir="ltr">Data Lifecycle &amp; Retention</span></h3>
+            <p>سیاست‌های نگهداری، آرشیو، حذف و مدیریت چرخه‌ی عمر داده‌ها.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">09</span><span class="gov__t" dir="ltr">Business Glossary &amp; Data Standards</span></h3>
+            <p>تعریف یکپارچه‌ی اصطلاحات کسب‌وکار، نام‌گذاری، واحدها، قالب‌ها و مفاهیم مشترک سازمانی.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">10</span><span class="gov__t" dir="ltr">Governance for AI &amp; Agents</span></h3>
+            <p>تعیین سیاست استفاده از داده در مدل‌ها و Agentها، محدودیت دسترسی ابزارها، حفاظت از داده‌های حساس و ردیابی استفاده از داده در خروجی‌های AI.</p>
+          </li>
+          <li>
+            <h3><span class="gov__n">11</span><span class="gov__t" dir="ltr">Data Governance Policies &amp; Audit</span></h3>
+            <p>تدوین سیاست‌های رسمی، ثبت رویدادها، ممیزی دسترسی‌ها و بررسی انطباق با استانداردها و الزامات سازمان.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide slide--ingest" id="s-ingest" data-label="دریافت داده" hidden>
+      <div class="slide__inner ingest">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> Data Ingestion &amp; Processing</p>
+            <h2>دریافت و پردازش داده</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="ingest__lead">هدف این لایه، اتصال به سامانه‌های سازمانی مانند راهکاران ERP، هسته سیستم سون و سامانه جامع تجارت، استخراج داده، انتقال به Data Lake و مدیریت فرآیندهای ETL/ELT است.</p>
+        <div class="ingest__grid">
+          <div>
+            <p class="gov__label">ابزارهای پیشنهادی</p>
+            <ul class="tools">
+              <li>
+                <h3>Connectors</h3>
+                <p><code>httpx</code> برای REST API، <code>zeep</code> برای SOAP و <code>SQLAlchemy</code> به‌همراه Driver دیتابیس برای اتصال SQL.</p>
+              </li>
+              <li>
+                <h3>ETL/ELT</h3>
+                <p><code>dlt</code> و <code>SSIS</code> برای استخراج و بارگذاری؛ <code>dbt Core</code> برای تبدیل SQL.</p>
+              </li>
+              <li>
+                <h3>Scheduling &amp; Orchestration</h3>
+                <p><code>Apache Airflow</code> یا <code>SQL Server Agent</code> برای زمان‌بندی، وابستگی و اجرای مجدد.</p>
+              </li>
+              <li>
+                <h3>Data Quality</h3>
+                <p><code>Pandera</code> برای اعتبارسنجی داده‌های Python و تست‌های <code>dbt</code> برای کنترل کیفیت مدل‌های SQL.</p>
+              </li>
+            </ul>
+            <p class="gov__label">روش اتصال به سامانه‌های سازمانی</p>
+            <p class="ingest__copy">ابتدا روش دسترسی رسمی هر سامانه مشخص می‌شود: API، دیتابیس Read-only یا فایل‌های خروجی. سپس Connector متناسب توسعه می‌یابد و واکشی افزایشی با <code>CDC</code> یا <code>Change Tracking</code>، به‌همراه مدیریت خطا، پیاده‌سازی می‌شود.</p>
+          </div>
+          <div>
+            <p class="gov__label">الگوی اجرایی پیشنهادی</p>
+            <div class="pipe" dir="ltr">
+              <p class="pipe__orch"><strong>Orchestration</strong><span>Airflow / SQL Server Agent</span></p>
+              <ol>
+                <li><strong>Source Systems</strong><span>ERP / API / SQL / Files</span></li>
+                <li><strong>Extract &amp; Load</strong><span>Python / dlt / SSIS</span></li>
+                <li><strong>Raw Data / Bronze</strong><span>Data Lake</span></li>
+                <li><strong>Transform &amp; Validate</strong><span>SQL / dbt Core / Pandera</span></li>
+                <li><strong>Curated Data</strong><span>Silver &amp; Gold</span></li>
+              </ol>
+            </div>
+            <p class="ingest__note"><strong>نکته معماری.</strong> Apache Airflow مسئول زمان‌بندی و مدیریت اجرای مراحل است؛ استخراج، تبدیل و اعتبارسنجی را ابزارهای Python و SQL انجام می‌دهند. انتخاب Connectorها به روش دسترسی، حجم داده و تناوب به‌روزرسانی هر سامانه بستگی دارد.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--lake" id="s-data" data-label="پلتفرم داده" hidden>
+      <div class="slide__inner lake">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> Data Platform</p>
+            <h2>Lakehouse / Warehouse</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="lake__lead">یک لایه متمرکز و قابل اعتماد برای نگهداری، سازمان‌دهی و ارائه تمام داده‌های سازمان؛ منبع داده مشترک برای Analytics &amp; BI و AI &amp; Agent Platform.</p>
+
+        <p class="gov__label">لایه‌بندی داده‌ها</p>
+        <ol class="tiers">
+          <li class="is-bronze">
+            <h3>Bronze</h3>
+            <p class="tiers__tag">Raw</p>
+            <p>نگهداری داده‌های دریافتی با حداقل تغییر و حفظ قابلیت ردیابی.</p>
+          </li>
+          <li class="is-silver">
+            <h3>Silver</h3>
+            <p class="tiers__tag">Cleaned &amp; Conformed</p>
+            <p>پاک‌سازی، اعتبارسنجی، حذف تکرار و یکپارچه‌سازی داده‌ها.</p>
+          </li>
+          <li class="is-gold">
+            <h3>Gold</h3>
+            <p class="tiers__tag">Business-Ready</p>
+            <p>داده و مدل آماده مصرف برای گزارش، KPI، تحلیل کسب‌وکار و Agentها.</p>
+          </li>
+        </ol>
+
+        <div class="lake__grid">
+          <div>
+            <p class="gov__label">جریان داده</p>
+            <div class="lake-flow">
+              <ol>
+                <li class="is-src"><strong>Source Systems</strong></li>
+                <li class="is-in"><strong>Data Ingestion &amp; Processing</strong></li>
+                <li class="is-chain" aria-label="Bronze to Gold">
+                  <span class="c-bronze">Bronze</span>
+                  <span class="c-silver">Silver</span>
+                  <span class="c-gold">Gold</span>
+                </li>
+                <li class="is-access">
+                  <strong>Controlled Data Access</strong>
+                  <span>Catalog / Permissions / Semantic Layer</span>
+                </li>
+              </ol>
+              <div class="lake-split">
+                <p class="is-bi">Analytics &amp; BI</p>
+                <p class="is-ai">AI &amp; Agent Platform</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="gov__label">ابزارهای پیشنهادی</p>
+            <ul class="tools">
+              <li>
+                <h3>Storage &amp; Table Format</h3>
+                <p><code>S3 / MinIO</code> و <code>Apache Iceberg</code> برای Lakehouse. در Microsoft، <code>SQL Server</code> برای Data Warehouse.</p>
+              </li>
+              <li>
+                <h3>Query &amp; Processing</h3>
+                <p><code>Trino</code> برای Query؛ <code>Apache Spark</code> فقط برای پردازش‌های حجیم.</p>
+              </li>
+              <li>
+                <h3>Data Transformation</h3>
+                <p><code>dbt Core</code> برای مدل داده؛ Indexing و Partitioning متناسب با حجم.</p>
+              </li>
+              <li>
+                <h3>Catalog &amp; Metadata</h3>
+                <p><code>OpenMetadata</code> برای کاتالوگ، مالکیت، Lineage و کشف داده.</p>
+              </li>
+              <li>
+                <h3>Access Control</h3>
+                <p>سیاست دسترسی در <code>Trino</code>؛ کنترل متمرکز و ریزدانه با <code>Apache Ranger</code> در صورت نیاز.</p>
+              </li>
+              <li>
+                <h3>Semantic Layer</h3>
+                <p>تعریف یکپارچه مفاهیم و KPIها با <code>dbt Semantic Layer</code> یا <code>Cube</code>.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="gov__label">اصول کلیدی</p>
+        <ol class="principles">
+          <li><span class="gov__n">01</span><p>تمام داده‌های موردنیاز سازمان، از خام تا آماده مصرف، در این لایه مدیریت می‌شوند.</p></li>
+          <li><span class="gov__n">02</span><p>مصرف‌کنندگان از مسیر کنترل‌شده استفاده می‌کنند، نه اتصال مستقیم به منابع عملیاتی.</p></li>
+          <li><span class="gov__n">03</span><p>KPIها و مفاهیم کسب‌وکار یکپارچه‌اند تا BI و Agentها نتایج متناقض نسازند.</p></li>
+          <li><span class="gov__n">04</span><p>دسترسی بر اساس نقش، مالکیت، حساسیت و سیاست امنیتی اعمال می‌شود.</p></li>
+          <li><span class="gov__n">05</span><p>ابزارها بر اساس مقیاس و نیاز واقعی انتخاب می‌شوند؛ همه از روز اول لازم نیستند.</p></li>
+        </ol>
+        <p class="lake__rec"><strong>پیشنهاد اجرایی.</strong> شروع با <code>MinIO</code> + <code>Apache Iceberg</code> + <code>dbt Core</code> و <code>Trino</code>. سپس <code>OpenMetadata</code> برای کاتالوگ و Lineage. Semantic Layer و کنترل دسترسی ریزدانه متناسب با مصرف‌کنندگان تکمیل می‌شود.</p>
+      </div>
+    </section>
+
+    <section class="slide slide--bi" id="s-bi" data-label="تحلیل و BI" hidden>
+      <div class="slide__inner bi">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> Analytics &amp; BI</p>
+            <h2>Semantic Layer &amp; Business Analytics</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="bi__lead">لایه تحلیلی متمرکز برای تعریف و محاسبه یکپارچه مفاهیم کسب‌وکار، <bdi>Metrics</bdi>، <bdi>KPI/OKR</bdi> و تحلیل آماری. خروجی‌ها مستقل از ابزار نمایش‌اند و در گزارش، داشبورد، <bdi>API</bdi> و <bdi>Agent</bdi> قابل استفاده‌اند.</p>
+
+        <p class="gov__label">اجزای اصلی</p>
+        <ol class="parts">
+          <li>
+            <h3>Semantic Layer</h3>
+            <p>مدل مفهومی کسب‌وکار، روابط موجودیت‌ها، ابعاد، فیلترها و منطق محاسباتی مشترک.</p>
+          </li>
+          <li>
+            <h3>Metrics</h3>
+            <p>معیارهای استاندارد و قابل استفاده مجدد، مانند درآمد، تعداد سفارش و نرخ رشد.</p>
+          </li>
+          <li>
+            <h3>KPI / OKR</h3>
+            <p>شاخص کلیدی، هدف، مقدار هدف، بازه زمانی و وضعیت تحقق.</p>
+          </li>
+          <li>
+            <h3>Reporting &amp; Business Logic</h3>
+            <p>منطق گزارش، تجمیع و مقایسه دوره‌ای. گزارش صفحه‌بندی‌شده با <code>SSRS</code>.</p>
+          </li>
+          <li>
+            <h3>Statistical Analysis</h3>
+            <p>روند، توزیع، همبستگی، ناهنجاری و سایر تحلیل‌های آماری کسب‌وکار.</p>
+          </li>
+          <li>
+            <h3>Analytics API &amp; MCP</h3>
+            <p>ارائه معیار، KPI، گزارش و تحلیل به اپلیکیشن‌ها و Agentها.</p>
+          </li>
+        </ol>
+
+        <div class="bi__grid">
+          <div>
+            <p class="gov__label">جریان داده</p>
+            <div class="bi-flow">
+              <ol>
+                <li class="is-data">
+                  <strong>Data Platform</strong>
+                  <span>Lakehouse / Warehouse</span>
+                </li>
+                <li class="is-sem">
+                  <strong>Semantic Layer</strong>
+                  <span>Business Models / Dimensions</span>
+                </li>
+                <li class="is-metrics">
+                  <strong>Metrics &amp; KPI / OKR</strong>
+                </li>
+              </ol>
+              <div class="bi-split">
+                <p class="is-report"><strong>Reporting &amp; Statistical Analysis</strong></p>
+                <div class="bi-branch">
+                  <p class="is-api"><strong>Analytics API</strong></p>
+                  <p class="is-mcp"><strong>MCP Server</strong></p>
+                </div>
+              </div>
+              <div class="bi-out">
+                <p>Dashboards</p>
+                <p>Reports</p>
+                <p class="is-agent">AI Agents</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="gov__label">ابزارهای پیشنهادی</p>
+            <ul class="tools">
+              <li>
+                <h3>Semantic Layer &amp; Metrics</h3>
+                <p><code>dbt Semantic Layer</code> یا <code>Cube</code>؛ در Microsoft، <code>SSAS Tabular</code>.</p>
+              </li>
+              <li>
+                <h3>Transformation &amp; Business Logic</h3>
+                <p><code>dbt Core</code> برای مدل‌های تحلیلی و منطق کسب‌وکار روی Data Platform.</p>
+              </li>
+              <li>
+                <h3>Statistical Analysis</h3>
+                <p><code>Python</code>، <code>Pandas</code> و <code>SciPy</code>؛ <code>statsmodels</code> برای مدل آماری و سری زمانی.</p>
+              </li>
+              <li>
+                <h3>Analytics API</h3>
+                <p><code>FastAPI</code> برای ارائه Metrics، KPI، گزارش و تحلیل از طریق API.</p>
+              </li>
+              <li>
+                <h3>MCP Server</h3>
+                <p><code>FastMCP</code> برای ابزارهای تحلیلی Agent: دریافت KPI، مقایسه دوره‌ها، خلاصه گزارش و تحلیل روند.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="gov__label">اصول کلیدی</p>
+        <ol class="principles">
+          <li><span class="gov__n">01</span><p><bdi>Single Definition.</bdi> هر Metric و KPI تعریف، فرمول، واحد، ابعاد و بازه زمانی مرجع دارد.</p></li>
+          <li><span class="gov__n">02</span><p><bdi>Separation of Logic &amp; Presentation.</bdi> منطق محاسبه اینجاست؛ نمایش فقط خروجی را مصرف می‌کند.</p></li>
+          <li><span class="gov__n">03</span><p><bdi>Reusable Analytics.</bdi> هر معیار یک‌بار تعریف می‌شود و در گزارش، API و Agent دوباره به کار می‌رود.</p></li>
+          <li><span class="gov__n">04</span><p><bdi>Consistent Results.</bdi> داشبورد و Agent از همان تعریف و محاسبه مرجع استفاده می‌کنند.</p></li>
+          <li><span class="gov__n">05</span><p><bdi>Governed Access.</bdi> دسترسی تابع مجوز کاربر و سیاست‌های امنیتی Data Platform است.</p></li>
+          <li><span class="gov__n">06</span><p><bdi>MCP as an Interface.</bdi> MCP فقط مسیر دسترسی Agent است، نه محل منطق کسب‌وکار یا کنترل دسترسی.</p></li>
+        </ol>
+        <p class="bi__rec"><strong>پیشنهاد معماری.</strong> هسته لایه روی <bdi>Semantic Layer + Metrics + Analytics API</bdi> بنا می‌شود و <bdi>MCP Server</bdi> یکی از مصرف‌کنندگان همین قابلیت‌هاست. گزارش و Agent از یک منطق تحلیلی مشترک استفاده می‌کنند، بدون پیاده‌سازی جداگانه منطق در هر ابزار.</p>
+      </div>
+    </section>
+
+    <section class="slide slide--hub" id="s-ai" data-label="عامل‌ها" hidden>
+      <div class="slide__inner hub">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> AI &amp; Agent Platform</p>
+            <h2>ارکستراسیون عامل‌ها</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="hub__lead">درخواست‌ها وارد <bdi>Agent Orchestrator</bdi> می‌شوند. ارکستر، عامل‌های لازم را انتخاب می‌کند و همان درخواست را به‌صورت موازی برایشان می‌فرستد.</p>
+
+        <div class="orch">
+          <article class="gate gate--req">
+            <strong>درخواست‌ها</strong>
+            <span>ورودی کاربر، سامانه یا عامل دیگر</span>
+          </article>
+          <div class="orch__stem" aria-hidden="true"></div>
+          <article class="gate gate--hub">
+            <strong dir="ltr">Agent Orchestrator</strong>
+            <span>انتخاب عامل‌ها و ارسال موازی</span>
+          </article>
+          <div class="fan">
+            <div class="fan__stem" aria-hidden="true"></div>
+            <p class="fan__tag">موازی <bdi>Parallel</bdi></p>
+            <ol class="fan__list">
+              <li>
+                <a class="ag" href="#s-agent" data-goto="s-agent">
+                  <span class="ag__n">01</span>
+                  <strong>عامل فروش</strong>
+                  <em dir="ltr">Sales Agent</em>
+                  <span dir="ltr">Vehicle Sales Intelligence</span>
+                </a>
+              </li>
+              <li>
+                <a class="ag" href="#s-agent" data-goto="s-agent">
+                  <span class="ag__n">02</span>
+                  <strong>عامل خدمات پس از فروش</strong>
+                  <em dir="ltr">After Sales Agent</em>
+                  <span dir="ltr">Service &amp; Parts Intelligence</span>
+                </a>
+              </li>
+              <li>
+                <a class="ag" href="#s-agent" data-goto="s-agent">
+                  <span class="ag__n">03</span>
+                  <strong>عامل مالی و اعتبارات</strong>
+                  <em dir="ltr">Finance Agent</em>
+                  <span dir="ltr">Corporate Finance &amp; Audit</span>
+                </a>
+              </li>
+              <li>
+                <a class="ag" href="#s-agent" data-goto="s-agent">
+                  <span class="ag__n">04</span>
+                  <strong>عامل هوش تجاری</strong>
+                  <em dir="ltr">BI Agent</em>
+                  <span dir="ltr">Business Intelligence &amp; Semantic Model</span>
+                </a>
+              </li>
+              <li>
+                <a class="ag" href="#s-agent" data-goto="s-agent">
+                  <span class="ag__n">05</span>
+                  <strong>عامل بازرگانی خارجی</strong>
+                  <em dir="ltr">Trade &amp; Supply Agent</em>
+                  <span dir="ltr">Customs &amp; Global Supply Chain</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <p class="orch__hint">کلیک روی هر عامل، الگوی ساخت آن را باز می‌کند.</p>
+        <p class="ai__tool"><strong>ابزار پیشنهادی.</strong> <bdi>LangChain</bdi> برای ساخت هر عامل، و <bdi>LangGraph</bdi> برای ارکستراسیون، مسیریابی و اجرای موازی.</p>
+      </div>
+    </section>
+
+    <section class="slide slide--blueprint" id="s-agent" data-label="الگوی عامل" hidden>
+      <div class="slide__inner blueprint">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> AI &amp; Agent Platform</p>
+            <h2>الگوی ساخت عامل</h2>
+          </div>
+          <a class="back" href="#s-ai" data-goto="s-ai">ارکستراسیون عامل‌ها</a>
+        </header>
+        <p class="hub__lead">هر پنج عامل با همین الگو ساخته می‌شوند. هسته یکی است؛ <bdi>Tools</bdi>، <bdi>Skills</bdi> و <bdi>Resources</bdi> برای هر حوزه جدا پر می‌شوند.</p>
+
+        <div class="blueprint__map">
+          <div class="fan fan--3 fan--up">
+            <ol class="fan__list">
+              <li>
+                <article class="bp">
+                  <h3 dir="ltr">Prompt</h3>
+                  <p>نقش، دستور و مرز تصمیم عامل.</p>
+                </article>
+              </li>
+              <li>
+                <article class="bp">
+                  <h3 dir="ltr">Memory</h3>
+                  <p>حافظه گفتگو و زمینه جاری.</p>
+                </article>
+              </li>
+              <li>
+                <article class="bp">
+                  <h3 dir="ltr">Planning</h3>
+                  <p>شکستن درخواست به گام‌های اجرا.</p>
+                </article>
+              </li>
+            </ol>
+            <div class="fan__stem" aria-hidden="true"></div>
+          </div>
+
+          <article class="bp__core">
+            <p dir="ltr">AI Agent</p>
+            <strong>هسته تصمیم و پاسخ</strong>
+            <span dir="ltr">LangChain</span>
+          </article>
+
+          <div class="fan fan--3">
+            <div class="fan__stem" aria-hidden="true"></div>
+            <ol class="fan__list">
+              <li>
+                <article class="bp">
+                  <h3 dir="ltr">Tools</h3>
+                  <p>ابزارهای عملیاتی مختص همان عامل.</p>
+                </article>
+              </li>
+              <li>
+                <article class="bp">
+                  <h3 dir="ltr">Skills</h3>
+                  <p>مهارت‌های تخصصی مختص همان عامل.</p>
+                </article>
+              </li>
+              <li>
+                <article class="bp bp--res">
+                  <h3 dir="ltr">Resources</h3>
+                  <p>اتصال به منابع، از یکی از این مسیرها:</p>
+                  <ul>
+                    <li>دانش سازمانی</li>
+                    <li>داده‌های BI</li>
+                    <li dir="ltr">MCP Server</li>
+                  </ul>
+                </article>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <p class="ai__tool"><strong>ساخت عامل.</strong> هر عامل با <bdi>LangChain</bdi> و اتصال‌های بالا ساخته می‌شود. <bdi>LangGraph</bdi> فقط مسئول انتخاب و اجرای موازی همین عامل‌هاست، نه تعریف منطق داخل آن‌ها.</p>
+      </div>
+    </section>
+
+    <section class="slide slide--app" id="s-app" data-label="بک‌اند" hidden>
+      <div class="slide__inner app">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> Application &amp; API Layer</p>
+            <h2>بک‌اند و API</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="app__lead">لایه مرکزی <bdi>Backend</bdi> برای منطق کاربردی و ارتباط امن بین <bdi>Frontend</bdi>، <bdi>Data Platform</bdi>، <bdi>Analytics &amp; BI</bdi> و <bdi>AI &amp; Agent Platform</bdi>. از <bdi>Batch</bdi> و <bdi>Stream</bdi> پشتیبانی می‌کند و مسئول API، کنترل دسترسی، قوانین کسب‌وکار و فرآیندهای اجرایی است.</p>
+
+        <p class="gov__label">وظایف اصلی</p>
+        <ol class="parts">
+          <li>
+            <h3>API Management</h3>
+            <p>طراحی و ارائه APIهای استاندارد برای ارتباط اجزای پلتفرم.</p>
+          </li>
+          <li>
+            <h3>Authorization</h3>
+            <p>مجوزها، نقش‌ها و کنترل دسترسی مبتنی بر <bdi>RBAC</bdi>.</p>
+          </li>
+          <li>
+            <h3>Business Logic</h3>
+            <p>پیاده‌سازی متمرکز و قابل استفاده مجدد قوانین کسب‌وکار.</p>
+          </li>
+          <li>
+            <h3>Job Management</h3>
+            <p>مدیریت Jobهای پس‌زمینه، وضعیت اجرا، خطا و تلاش مجدد.</p>
+          </li>
+          <li>
+            <h3>Batch Processing</h3>
+            <p>وظایف زمان‌بندی‌شده و پردازش حجم بالا در بازه مشخص.</p>
+          </li>
+          <li>
+            <h3>Stream Processing</h3>
+            <p>جریان رویدادها و پردازش پیوسته یا نزدیک به بلادرنگ.</p>
+          </li>
+        </ol>
+
+        <div class="app__grid">
+          <div>
+            <p class="gov__label">جایگاه لایه</p>
+            <div class="app-flow">
+              <p class="is-front"><strong>Frontend</strong></p>
+              <p class="is-core">
+                <strong>Application &amp; API</strong>
+                <span>API · Authorization · Business Logic · Jobs</span>
+              </p>
+              <div class="app-split">
+                <p class="is-data">Data Platform</p>
+                <p class="is-an">Analytics &amp; BI</p>
+                <p class="is-ai">AI &amp; Agent Platform</p>
+              </div>
+              <div class="app-modes">
+                <p><strong>Batch</strong><span>زمان‌بندی‌شده</span></p>
+                <p><strong>Stream</strong><span>رویداد و نزدیک به بلادرنگ</span></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="gov__label">ابزارهای پیشنهادی</p>
+            <ul class="tools">
+              <li>
+                <h3>Python</h3>
+                <p><code>FastAPI</code> برای توسعه APIها و سرویس‌های Backend.</p>
+              </li>
+              <li>
+                <h3>Node.js</h3>
+                <p><code>NestJS</code> یا <code>Express</code> برای Backend ماژولار و ارتباط بلادرنگ.</p>
+              </li>
+              <li>
+                <h3>Background Jobs</h3>
+                <p><code>Celery</code> برای Python و <code>BullMQ</code> برای Node.js، متناسب با پردازش پس‌زمینه.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="app__note"><strong>Batch و Stream.</strong> دو الگوی پردازش‌اند. برای Stream حجیم و پیوسته ممکن است به <code>Kafka</code> نیاز باشد و نباید الزاماً تمام پردازش Stream داخل Backend انجام شود.</p>
+      </div>
+    </section>
+
+    <section class="slide slide--ui" id="s-ui" data-label="رابط کاربری" hidden>
+      <div class="slide__inner ui">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> Presentation Layer</p>
+            <h2>React Application</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="ui__lead">لایه تعاملی و یکپارچه پلتفرم. یک <bdi>React Application</bdi> محیط کاری <bdi>Agent</bdi>ها، داشبوردهای تحلیلی و پنل مدیریت را در اختیار کاربر می‌گذارد. ارتباط با <bdi>Backend</bdi> از <bdi>REST API</bdi> و <bdi>Streaming</bdi> است و احراز هویت و نشست کاربر را پشتیبانی می‌کند.</p>
+
+        <p class="gov__label">بخش‌های اصلی</p>
+        <ol class="parts">
+          <li class="is-agent">
+            <h3>Agent Workspace</h3>
+            <p>تعامل با Agentها، مشاهده پاسخ‌ها و پیگیری اجرای وظایف.</p>
+          </li>
+          <li class="is-bi">
+            <h3>BI Dashboards</h3>
+            <p>نمایش داشبوردها، نمودارها، <bdi>Metrics</bdi> و <bdi>KPI</bdi>ها.</p>
+          </li>
+          <li class="is-admin">
+            <h3>Admin Panel</h3>
+            <p>مدیریت کاربران، نقش‌ها، دسترسی‌ها و تنظیمات پلتفرم.</p>
+          </li>
+        </ol>
+
+        <div class="ui__grid">
+          <div>
+            <p class="gov__label">ارتباط با Backend</p>
+            <div class="ui-flow">
+              <p class="is-face">
+                <strong>React Application</strong>
+                <span>Agent Workspace · BI Dashboards · Admin</span>
+              </p>
+              <div class="ui-links">
+                <p><strong>REST API</strong><span>تبادل داده</span></p>
+                <p class="is-stream"><strong>Streaming</strong><span>پاسخ تدریجی و بلادرنگ</span></p>
+                <p class="is-auth"><strong>Authentication</strong><span>نشست و توکن</span></p>
+              </div>
+              <p class="is-api"><strong>Application &amp; API</strong><span>Backend</span></p>
+            </div>
+          </div>
+          <div>
+            <p class="gov__label">ابزارهای Frontend</p>
+            <ul class="tools">
+              <li>
+                <h3>React + TypeScript</h3>
+                <p>رابط کاربری ماژولار و قابل نگهداری.</p>
+              </li>
+              <li>
+                <h3>Vite</h3>
+                <p>ابزار Build و محیط توسعه.</p>
+              </li>
+              <li>
+                <h3>Tailwind CSS</h3>
+                <p>طراحی و استایل‌دهی رابط کاربری.</p>
+              </li>
+              <li>
+                <h3>shadcn/ui</h3>
+                <p>کامپوننت‌های قابل سفارشی‌سازی.</p>
+              </li>
+              <li>
+                <h3>React Router</h3>
+                <p>مدیریت مسیرها و صفحات برنامه.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--risk" id="s-risk" data-label="چالش‌ها" hidden>
+      <div class="slide__inner risk">
+        <header class="gov__head">
+          <div class="gov__id">
+            <p class="kicker"><span class="num" data-num></span> Risks</p>
+            <h2>چالش‌های مسیر پروژه</h2>
+          </div>
+          <a class="back" href="#s-2" data-goto="s-2">معماری مفهومی</a>
+        </header>
+        <p class="risk__lead">در هر لایه، چند چالش تعیین می‌کند خروجی پایدار، درست و قابل اعتماد بماند.</p>
+        <ol class="risk__list">
+          <li data-layer="governance">
+            <header>
+              <span>Data Governance</span>
+              <strong>شورای حاکمیت داده</strong>
+            </header>
+            <ul>
+              <li>سیاست و خط‌مشی، متناسب با ساختار سازمان</li>
+              <li>مدیریت داده، منطق و استاندارد کسب‌وکار</li>
+              <li>حل تعارض داده بین بخش‌ها</li>
+            </ul>
+          </li>
+          <li data-layer="ingestion">
+            <header>
+              <span>Data Ingestion &amp; Processing</span>
+              <strong>دریافت پایدار</strong>
+            </header>
+            <ul>
+              <li>دریافت و پردازش باید پایدار و بادوام باشد</li>
+              <li>اختلال در این بخش به تحلیل‌ها آسیب می‌زند</li>
+              <li>برای هر منبع، سناریو و مسیر جایگزین لازم است</li>
+            </ul>
+          </li>
+          <li data-layer="data">
+            <header>
+              <span>Data Platform</span>
+              <strong>منبع استراتژیک <em>حیاتی</em></strong>
+            </header>
+            <ul>
+              <li>امنیت و سطح دسترسی</li>
+              <li>نباید از کار بیفتد؛ همه سیستم‌ها از آن تغذیه می‌شوند</li>
+              <li>تازگی، ثبات و رهگیری کامل</li>
+              <li>رفع سریع خطا و پایش دائمی سلامت</li>
+            </ul>
+          </li>
+          <li data-layer="analytics">
+            <header>
+              <span>Analytics &amp; BI</span>
+              <strong>قلب منطق کسب‌وکار <em>حیاتی</em></strong>
+            </header>
+            <ul>
+              <li>صحت هر KPI در برابر واقعیت</li>
+              <li>رهگیری دائمی به‌روزرسانی معیارها</li>
+              <li>بار محاسبه، درستی و تازگی گزارش‌ها</li>
+              <li>امکان تحلیل چندوجهی</li>
+            </ul>
+          </li>
+          <li data-layer="ai">
+            <header>
+              <span>AI &amp; Agent Platform</span>
+              <strong>اعتماد به خروجی</strong>
+            </header>
+            <ul>
+              <li>کمترین توهم (<bdi>hallucination</bdi>) در پاسخ‌ها</li>
+              <li>ارزیابی عملکرد Agentها</li>
+              <li>رهگیری روزانه صحت هر پاسخ</li>
+              <li>محاسبه هزینه و مصرف <bdi>token</bdi></li>
+            </ul>
+          </li>
+          <li data-layer="application">
+            <header>
+              <span>Application &amp; API</span>
+              <strong>پایداری سرویس</strong>
+            </header>
+            <ul>
+              <li>پایداری سرویس</li>
+              <li>دسترسی و امنیت</li>
+              <li>مدیریت استثناها</li>
+            </ul>
+          </li>
+          <li data-layer="presentation">
+            <header>
+              <span>Presentation Layer</span>
+              <strong>تجربه کاربر</strong>
+            </header>
+            <ul>
+              <li>چالش اصلی این لایه، <bdi>UX</bdi> و <bdi>UI</bdi> است</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <button type="button" data-prev>قبلی</button>
+    <button type="button" data-next>بعدی</button>
+  </footer>
+
+  <script src="js/deck.js"></script>
+</body>
+</html>
