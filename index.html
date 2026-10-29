@@ -202,7 +202,7 @@
             <img class="brand" src="assets/persia-logo.png" alt="لوگوی پرشیا خودرو">
           </div>
         </header>
-        <p class="ingest__lead">هدف این لایه، اتصال به سامانه‌های سازمانی مانند راهکاران ERP، هسته سیستم سون و سامانه جامع تجارت، استخراج داده، انتقال به Data Lake و مدیریت فرآیندهای ETL/ELT است.</p>
+        <p class="ingest__lead">هدف این لایه، اتصال به سامانه‌های سازمانی مانند راهکاران ERP، هسته سیستم سون پرو و سامانه جامع تجارت، استخراج داده، انتقال به Data Lake و مدیریت فرآیندهای ETL/ELT است.</p>
         <div class="ingest__grid">
           <div>
             <p class="gov__label">ابزارهای پیشنهادی</p>
@@ -222,6 +222,10 @@
               <li>
                 <h3>Data Quality</h3>
                 <p><code>Pandera</code> برای اعتبارسنجی داده‌های Python و تست‌های <code>dbt</code> برای کنترل کیفیت مدل‌های SQL.</p>
+              </li>
+              <li>
+                <h3>Distributed Processing</h3>
+                <p><code>Apache Spark</code> فقط برای پردازش‌های توزیع‌شده.</p>
               </li>
             </ul>
             <p class="gov__label">روش اتصال به سامانه‌های سازمانی</p>
@@ -306,7 +310,7 @@
             <ul class="tools">
               <li>
                 <h3>Storage &amp; Table Format</h3>
-                <p><code>S3 / MinIO</code> و <code>Apache Iceberg</code> برای Lakehouse. در Microsoft، <code>SQL Server</code> برای Data Warehouse.</p>
+                <p><code>S3 / MinIO</code> و <code>Apache Iceberg</code> برای Lakehouse. <code>Hadoop / HDFS</code> برای داده‌های حجیم. در Microsoft، <code>SQL Server</code> برای Data Warehouse.</p>
               </li>
               <li>
                 <h3>Query &amp; Processing</h3>
@@ -529,7 +533,7 @@
           </div>
         </div>
         <p class="orch__hint">کلیک روی هر عامل، الگوی ساخت آن را باز می‌کند.</p>
-        <p class="ai__tool"><strong>ابزار پیشنهادی.</strong> <bdi>LangChain</bdi> برای ساخت هر عامل، و <bdi>LangGraph</bdi> برای ارکستراسیون، مسیریابی و اجرای موازی.</p>
+        <p class="ai__tool"><strong>ابزار پیشنهادی.</strong> برای بخش‌های Agent، <bdi>LangChain</bdi> و <bdi>LangGraph</bdi>. در زیرساخت کاملاً مایکروسافتی، <bdi>Microsoft Agent Framework</bdi>.</p>
       </div>
     </section>
 
@@ -607,7 +611,7 @@
             </ol>
           </div>
         </div>
-        <p class="ai__tool"><strong>ساخت عامل.</strong> هر عامل با <bdi>LangChain</bdi> و اتصال‌های بالا ساخته می‌شود. <bdi>LangGraph</bdi> فقط مسئول انتخاب و اجرای موازی همین عامل‌هاست، نه تعریف منطق داخل آن‌ها.</p>
+        <p class="ai__tool"><strong>ابزار پیشنهادی.</strong> برای بخش‌های Agent، <bdi>LangChain</bdi> و <bdi>LangGraph</bdi>. در زیرساخت کاملاً مایکروسافتی، <bdi>Microsoft Agent Framework</bdi>.</p>
       </div>
     </section>
 
